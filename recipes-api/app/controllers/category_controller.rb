@@ -1,4 +1,6 @@
 class CategoryController < ApplicationController
+  before_action :authorized
+  
   def index
     @category = Category.all
     if @category.empty?
